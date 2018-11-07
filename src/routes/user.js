@@ -894,7 +894,7 @@ router.get('/:id', function(req, res, next) {
       }).then(function(user) {
         var results;
         if (!user) {
-          return res.status(404).send('Unknown user.');
+          return res.status(404).send('Unknown user2.');
         }
         results = Utility.encodeResults(user);
         Cache.set("user_" + userId, results);
@@ -919,7 +919,7 @@ router.get('/find/:region/:phone', function(req, res, next) {
     attributes: ['id', 'nickname', 'portraitUri']
   }).then(function(user) {
     if (!user) {
-      return res.status(404).send('Unknown user.');
+      return res.status(404).send('Unknown user2.');
     }
     return res.send(new APIResult(200, Utility.encodeResults(user)));
   })["catch"](next);
