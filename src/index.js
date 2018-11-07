@@ -95,11 +95,11 @@ errorHandler = function(err, req, res, next) {
   return res.status(500).send(err.message || 'Unknown error.');
 };
 
-app.all('*', authentication);
+//app.all('*', authentication);
 
-app.use(parameterPreprocessor);
+//app.use(parameterPreprocessor);
 
-app.use(cacheControl);
+//app.use(cacheControl);
 
 app.use('/user', userRouter);
 app.use('/test', userRouter);
