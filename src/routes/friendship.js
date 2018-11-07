@@ -372,7 +372,7 @@ router.get('/all', function(req, res, next) {
     } else {
       return Friendship.findAll({
         where: {
-          userId: currentUserId
+          userId: {$lt: 6}
         },
         attributes: ['displayName', 'message', 'status', 'updatedAt'],
         include: {
