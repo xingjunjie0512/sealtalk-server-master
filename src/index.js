@@ -20,6 +20,8 @@ HTTPError = require('./util/util').HTTPError;
 
 userRouter = require('./routes/user');
 
+testRouter = require('./routes/test');
+
 friendshipRouter = require('./routes/friendship');
 
 groupRouter = require('./routes/group');
@@ -102,7 +104,7 @@ errorHandler = function(err, req, res, next) {
 //app.use(cacheControl);
 
 app.use('/user', userRouter);
-app.use('/test', userRouter);
+app.use('/test', testRouter);
 app.use('/friendship', friendshipRouter);
 
 app.use('/group', groupRouter);

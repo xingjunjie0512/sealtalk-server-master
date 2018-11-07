@@ -38,3 +38,4 @@ regionMap = {
 router.post('/mytest', function(req, res, next) {
     return res.status(403).send('aaaaaaaaaaa.');
 });
+module.exports = router;
