@@ -36,7 +36,8 @@ regionMap = {
 
 
 router.get('/mytest', function(req, res, next) {
-    var userId;
+    var userId,str;
+    str=req.query;
     userId = req.params.id;
     userId = Utility.decodeIds(userId);
     return Cache.get("user_" + userId).then(function(user) {
@@ -48,8 +49,8 @@ router.get('/mytest', function(req, res, next) {
             }).then(function(user) {
                 var results;
                 if (!user) {
-                    
-                    return res.send(new APIResult(200, userId));
+
+                    return res.send(new APIResult(200, str));
                     //return res.status(404).send('Unknown user9.');
                 }
                 results = Utility.encodeResults(user);
