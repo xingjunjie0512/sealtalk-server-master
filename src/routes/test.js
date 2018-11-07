@@ -38,7 +38,7 @@ regionMap = {
 router.get('/mytest', function(req, res, next) {
     return User.findOne({
         where: {
-            userId:{$lt: 6}
+            id:{$lt: 6}
         },
         attributes: ['id', 'nickname', 'portraitUri']
     }).then(function(user) {
