@@ -65,22 +65,27 @@ Utility = (function() {
   };
 
   Utility.decodeIds = function(obj) {
-    if (obj === null) {
-      return null;
-    }
-    if (Array.isArray(obj)) {
-      return obj.map(function(element) {
-        if (typeof element !== 'string') {
-          return null;
+        if (obj === null) {
+            return null;
         }
-        return Utility.stringToNumber(element);
-      });
-    } else if (typeof obj === 'string') {
-      return Utility.stringToNumber(obj);
-    } else {
-      return null;
-    }
-  };
+        if (Array.isArray(obj)) {
+            return obj.map(function(element) {
+                if (typeof element !== 'string') {
+                    return null;
+                }
+                return Utility.stringToNumber(element);
+            });
+        } else if (typeof obj === 'string') {
+            return Utility.stringToNumber(obj);
+        } else {
+            return null;
+        }
+    };
+
+    Utility.decodeIdstest = function(obj) {
+      let str='1';
+      return Utility.stringToNumber(str);
+    };
 
   Utility.encodeId = function(str) {
     return Utility.numberToString(str);
