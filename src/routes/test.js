@@ -43,7 +43,9 @@ router.get('/mytest', function(req, res, next) {
         if (user) {
             return res.send(new APIResult(200, user));
         } else {
-            return User.findById(userId, {
+            return User.findOne({
+                where: {
+                },
                 attributes: ['id', 'nickname', 'portraitUri']
             }).then(function(user) {
                 var results;
