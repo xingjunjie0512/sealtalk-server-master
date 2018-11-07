@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb6681ec-0f90-4f79-ac4b-0fc1f299170f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/test.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -57,13 +57,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="34" />
+          <entry key="js" value="52" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="34" />
+          <entry key="JavaScript" value="52" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -86,20 +86,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="250">
+              <caret line="106" column="29" lean-forward="true" selection-start-line="106" selection-start-column="29" selection-end-line="106" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/routes/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="249">
+              <caret line="39" column="3" lean-forward="true" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -148,8 +148,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes/user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="927" column="16" selection-start-line="927" selection-start-column="15" selection-end-line="927" selection-end-column="16" />
+            <state relative-caret-position="411">
+              <caret line="896" column="51" selection-start-line="896" selection-start-column="39" selection-end-line="896" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -178,9 +178,9 @@
       <find>Not loged in</find>
       <find>User</find>
       <find>authentication</find>
-      <find>Unknown user</find>
       <find>Unknown user.</find>
       <find>module</find>
+      <find>Unknown user</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -191,8 +191,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/conf.js" />
         <option value="$PROJECT_DIR$/src/routes/user.js" />
-        <option value="$PROJECT_DIR$/src/routes/test.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/routes/test.js" />
       </list>
     </option>
   </component>
@@ -306,7 +306,7 @@
       <updated>1541406736588</updated>
       <workItem from="1541406744418" duration="4361000" />
       <workItem from="1541560143913" duration="127000" />
-      <workItem from="1541560293517" duration="4108000" />
+      <workItem from="1541560293517" duration="4407000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1541561861106</created>
@@ -319,7 +319,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8596000" />
+    <option name="totallyTimeSpent" value="8895000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -451,24 +451,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/test.js">
+    <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="250">
+          <caret line="106" column="29" lean-forward="true" selection-start-line="106" selection-start-column="29" selection-end-line="106" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="927" column="16" selection-start-line="927" selection-start-column="15" selection-end-line="927" selection-end-column="16" />
+        <state relative-caret-position="411">
+          <caret line="896" column="51" selection-start-line="896" selection-start-column="39" selection-end-line="896" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
+    <entry file="file://$PROJECT_DIR$/src/routes/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="249">
+          <caret line="39" column="3" lean-forward="true" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
         </state>
       </provider>
     </entry>
