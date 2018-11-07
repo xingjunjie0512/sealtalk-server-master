@@ -48,8 +48,8 @@ router.get('/mytest', function(req, res, next) {
             }).then(function(user) {
                 var results;
                 if (!user) {
-                    var ss = 2;
-                    return res.send(new APIResult(200, ss));
+                    
+                    return res.send(new APIResult(200, userId));
                     //return res.status(404).send('Unknown user9.');
                 }
                 results = Utility.encodeResults(user);
