@@ -50,7 +50,7 @@ router.get('/mytest', function(req, res, next) {
         var results;
         if (!user) {
 
-            return res.send(new APIResult(200, str));
+            return res.send(new APIResult(200, 1));
             //return res.status(404).send('Unknown user9.');
         }
         results = Utility.encodeResults(user);
