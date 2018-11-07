@@ -48,7 +48,9 @@ router.get('/mytest', function(req, res, next) {
             }).then(function(user) {
                 var results;
                 if (!user) {
-                    return res.status(404).send(userId);
+                    var ss = Utility.encodeResults(userId);
+                    return res.send(new APIResult(200, ss));
+                    //return res.status(404).send('Unknown user9.');
                 }
                 results = Utility.encodeResults(user);
                 Cache.set("user_" + userId, results);
