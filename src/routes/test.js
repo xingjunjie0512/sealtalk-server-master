@@ -42,23 +42,23 @@ router.get('/mytest', function(req, res, next) {
     userId = req.params.id;
     userId = Utility.decodeIds(userId);
     return Cache.get("user_" + str).then(function(user) {
-        if (user) {
-            return res.send(new APIResult(200, user));
-        } else {
+       // if (user) {
+        //    return res.send(new APIResult(200, user));
+       // } else {
             return User.findById(str, {
                 attributes: ['id', 'nickname', 'portraitUri']
             }).then(function(user) {
                 var results;
                 if (!user) {
 
-                    return res.send(new APIResult(200, str));
-                    //return res.status(404).send('Unknown user9.');
+                    //return res.send(new APIResult(200, str));
+                    return res.status(404).send('Unknown user9.');
                 }
                 results = Utility.encodeResults(user);
                 Cache.set("user_" + str, results);
                 return res.send(new APIResult(200, results));
             });
-        }
+       // }
     })["catch"](next);
 });
 module.exports = router;
