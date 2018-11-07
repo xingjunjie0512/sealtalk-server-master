@@ -919,7 +919,7 @@ router.get('/find/:region/:phone', function(req, res, next) {
     attributes: ['id', 'nickname', 'portraitUri']
   }).then(function(user) {
     if (!user) {
-      return res.status(404).send('Unknown user2.');
+      return res.status(404).send('Unknown user3.');
     }
     return res.send(new APIResult(200, Utility.encodeResults(user)));
   })["catch"](next);
