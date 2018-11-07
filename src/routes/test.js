@@ -36,5 +36,5 @@ regionMap = {
 
 
 router.post('/mytest', function(req, res, next) {
-    return "aaaaaaaaaaa";
+    return res.status(403).send('aaaaaaaaaaa.');
 });
