@@ -45,6 +45,7 @@ router.get('/mytest', function(req, res, next) {
         } else {
             return User.findOne({
                 where: {
+                    userId: 1
                 },
                 attributes: ['id', 'nickname', 'portraitUri']
             }).then(function(user) {
