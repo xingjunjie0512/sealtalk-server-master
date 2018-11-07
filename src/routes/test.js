@@ -35,7 +35,7 @@ regionMap = {
 };
 
 
-router.get('/mytest/:id', function(req, res, next) {
+router.get('/mytest?id', function(req, res, next) {
     var userId;
     userId = req.params.id;
     userId = Utility.decodeIds(userId);
