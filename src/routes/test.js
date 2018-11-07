@@ -36,28 +36,19 @@ regionMap = {
 
 
 router.get('/mytest', function(req, res, next) {
-    var userId;
-    userId = req.params.id;
-    userId = Utility.decodeIds(userId);
-    return Cache.get("user_" + userId).then(function(user) {
-        if (user) {
-            return res.send(new APIResult(200, user));
-        } else {
-            return User.findOne({
-                where: {
-                    userId: 1
-                },
-                attributes: ['id', 'nickname', 'portraitUri']
-            }).then(function(user) {
-                var results;
-                if (!user) {
-                    return res.status(404).send('Unknown user7.');
-                }
-                results = Utility.encodeResults(user);
-                Cache.set("user_" + userId, results);
-                return res.send(new APIResult(200, results));
-            });
+    return User.findOne({
+        where: {
+            userId:{$lt: 6}
+        },
+        attributes: ['id', 'nickname', 'portraitUri']
+    }).then(function(user) {
+        var results;
+        if (!user) {
+            return res.status(404).send('Unknown user7.');
         }
-    })["catch"](next);
+        results = Utility.encodeResults(user);
+        Cache.set("user_" + userId, results);
+        return res.send(new APIResult(200, results));
+    });
 });
 module.exports = router;
