@@ -36,7 +36,7 @@ regionMap = {
 
 
 router.get('/mytest', function(req, res, next) {
-    return User.findOne({
+    return User.findAll({
         where: {
            id:{$and: {a: 1}}
         },
