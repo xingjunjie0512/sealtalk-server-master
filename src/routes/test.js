@@ -43,7 +43,7 @@ router.get('/mytest', function(req, res, next) {
     //userId = Utility.decodeIds(userId);
     return User.findOne({
         where: {
-            id: str
+            id: 1
         },
         attributes: ['id', 'passwordHash', 'passwordSalt', 'nickname', 'portraitUri', 'rongCloudToken']
     }).then(function(user) {
