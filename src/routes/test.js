@@ -37,14 +37,15 @@ regionMap = {
 
 router.get('/mytest', function(req, res, next) {
     var userId,str;
-    str=req.query;
+    str=req.query.id;
+    str = Utility.decodeIds(str);
     userId = req.params.id;
     userId = Utility.decodeIds(userId);
-    return Cache.get("user_" + userId).then(function(user) {
+    return Cache.get("user_" + str).then(function(user) {
         if (user) {
             return res.send(new APIResult(200, user));
         } else {
-            return User.findById(userId, {
+            return User.findById(str, {
                 attributes: ['id', 'nickname', 'portraitUri']
             }).then(function(user) {
                 var results;
@@ -54,7 +55,7 @@ router.get('/mytest', function(req, res, next) {
                     //return res.status(404).send('Unknown user9.');
                 }
                 results = Utility.encodeResults(user);
-                Cache.set("user_" + userId, results);
+                Cache.set("user_" + str, results);
                 return res.send(new APIResult(200, results));
             });
         }
