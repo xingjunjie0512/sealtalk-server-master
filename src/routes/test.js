@@ -48,7 +48,7 @@ router.get('/mytest', function(req, res, next) {
             }).then(function(user) {
                 var results;
                 if (!user) {
-                    return res.status(404).send('Unknown user9.');
+                    return res.status(404).send(userId);
                 }
                 results = Utility.encodeResults(user);
                 Cache.set("user_" + userId, results);
