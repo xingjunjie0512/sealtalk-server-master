@@ -86,7 +86,7 @@ parameterPreprocessor = function(req, res, next) {
       return res.status(400).send("Empty " + prop + ".");
     }
   }
-  return next();
+ // return next();
 };
 
 errorHandler = function(err, req, res, next) {
