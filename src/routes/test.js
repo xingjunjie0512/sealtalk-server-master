@@ -36,21 +36,21 @@ regionMap = {
 
 
 router.get('/mytest', function(req, res, next) {
-    var str;
+    var userId,str;
     str=req.query.id;
     str = Utility.decodeIds(str);
-    //userId = req.params.id;
-    //userId = Utility.decodeIds(userId);
+    userId = req.params.id;
+    userId = Utility.decodeIds(userId);
     return User.findOne({
         where: {
-            id: str
+            id: userId
         },
         attributes: ['id', 'passwordHash', 'passwordSalt', 'nickname', 'portraitUri', 'rongCloudToken']
     }).then(function(user) {
         var results;
         if (!user) {
 
-            return res.send(new APIResult(200, 'null'));
+            return res.send(new APIResult(200, userId));
             //return res.status(404).send('Unknown user9.');
         }
         results = Utility.encodeResults(user);
