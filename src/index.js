@@ -99,9 +99,9 @@ errorHandler = function(err, req, res, next) {
 
 //app.all('*', authentication);
 
-//app.use(parameterPreprocessor);
+app.use(parameterPreprocessor);
 
-//app.use(cacheControl);
+app.use(cacheControl);
 
 app.use('/user', userRouter);
 app.use('/test', testRouter);
