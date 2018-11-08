@@ -86,7 +86,7 @@ parameterPreprocessor = function(req, res, next) {
       return res.status(400).send("Empty " + prop + ".");
     }
   }
- // return next();
+  return next();
 };
 
 errorHandler = function(err, req, res, next) {
@@ -97,12 +97,12 @@ errorHandler = function(err, req, res, next) {
   return res.status(500).send(err.message || 'Unknown error.');
 };
 
+app.use('/test', testRouter);
 
-
-//app.all('*', authentication);
+app.all('*', authentication);
 
 app.use(parameterPreprocessor);
-app.use('/test', testRouter);
+
 app.use(cacheControl);
 
 app.use('/user', userRouter);
