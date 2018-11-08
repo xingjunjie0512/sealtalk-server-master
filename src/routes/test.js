@@ -39,7 +39,7 @@ router.get('/mytest', function(req, res, next) {
     var userId,str;
     str=req.query.id;
     str = Utility.decodeIds(str);
-    userId = req.params.id;
+    //userId = req.params.id;
     //userId = Utility.decodeIds(userId);
     return User.findOne({
         where: {

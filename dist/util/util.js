@@ -77,6 +77,8 @@ Utility = (function() {
       });
     } else if (typeof obj === 'string') {
       return Utility.stringToNumber(obj);
+    } else if (typeof obj === 'number') {
+        return obj;
     } else {
       return null;
     }
