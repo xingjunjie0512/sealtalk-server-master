@@ -70,10 +70,12 @@ Utility = (function() {
     }
     if (Array.isArray(obj)) {
       return obj.map(function(element) {
-        if (typeof element !== 'string') {
-          return null;
-        }
-        return Utility.stringToNumber(element);
+         if (typeof obj === 'number') {
+            return obj;
+        }else if (typeof element !== 'string') {
+              return null;
+         }
+          return Utility.stringToNumber(element);
       });
     } else if (typeof obj === 'string') {
       return Utility.stringToNumber(obj);
