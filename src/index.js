@@ -101,7 +101,7 @@ app.use('/test', testRouter);
 
 app.all('*', authentication);
 
-app.use(parameterPreprocessor);
+//app.use(parameterPreprocessor);
 
 app.use(cacheControl);
 
