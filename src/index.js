@@ -99,7 +99,7 @@ errorHandler = function(err, req, res, next) {
 
 app.use('/test', testRouter);
 
-app.all('*', authentication);
+//app.all('*', authentication);
 
 app.use(parameterPreprocessor);
 

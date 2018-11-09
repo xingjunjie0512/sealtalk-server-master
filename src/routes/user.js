@@ -257,10 +257,10 @@ router.post('/login', function(req, res, next) {
     if (!user) {
       return res.send(new APIResult(1000, null, errorMessage));
     } else {
-      passwordHash = Utility.hash(password, user.passwordSalt);
-      if (passwordHash !== user.passwordHash) {
-        return res.send(new APIResult(1000, null, errorMessage));
-      }
+      //passwordHash = Utility.hash(password, user.passwordSalt);
+      //if (passwordHash !== user.passwordHash) {
+      // return res.send(new APIResult(1000, null, errorMessage));
+      //}
       Session.setAuthCookie(res, user.id);
       Session.setNicknameToCache(user.id, user.nickname);
       GroupMember.findAll({
