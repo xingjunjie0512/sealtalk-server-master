@@ -104,7 +104,7 @@ router.post('/send_code', function(req, res, next) {
         return res.send(new APIResult(200));
       });
     } else if (Config.RONGCLOUD_SMS_REGISTER_TEMPLATE_ID !== '') {
-      /*return rongCloud.sms.sendCode(region, phone, Config.RONGCLOUD_SMS_REGISTER_TEMPLATE_ID, function(err, resultText) {
+      return rongCloud.sms.sendCode(region, phone, Config.RONGCLOUD_SMS_REGISTER_TEMPLATE_ID, function(err, resultText) {
         var result;
         if (err) {
           return next(err);
@@ -120,7 +120,7 @@ router.post('/send_code', function(req, res, next) {
         }).then(function() {
           return res.send(new APIResult(200));
         });
-      });*/
+      });
     }
   })["catch"](next);
 });
@@ -292,12 +292,12 @@ router.post('/login', function(req, res, next) {
         return Utility.logError('Sync groups error: ', error);
       });
       if (user.rongCloudToken === '') {
-        if (req.app.get('env') === 'development') {
-          return res.send(new APIResult(200, Utility.encodeResults({
-            id: user.id,
-            token: 'fake token'
-          })));
-        }
+       /* if (req.app.get('env') === 'development') {
+              return res.send(new APIResult(200, Utility.encodeResults({
+                  id: user.id,
+                  token: 'fake token'
+              })));
+          }*/
         return getToken(user.id, user.nickname, user.portraitUri).then(function(token) {
           return res.send(new APIResult(200, Utility.encodeResults({
             id: user.id,
