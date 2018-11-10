@@ -97,9 +97,9 @@ errorHandler = function(err, req, res, next) {
   return res.status(500).send(err.message || 'Unknown error.');
 };
 
-app.use('/test', testRouter);
+//app.use('/test', testRouter);
 
-//app.all('*', authentication);
+app.all('*', authentication);
 
 app.use(parameterPreprocessor);
 

@@ -10,7 +10,7 @@ module.exports = {
     // 融云颁发的 App Secret，请访问融云开发者后台：https://developer.rongcloud.cn
     RONGCLOUD_APP_SECRET: 'QBNMhUSpdtky',
     // 融云短信服务提供的注册用户短信模板 Id
-    RONGCLOUD_SMS_REGISTER_TEMPLATE_ID: '6iYv6rln4agT3tIPJCS2',
+    RONGCLOUD_SMS_REGISTER_TEMPLATE_ID: '',
     // 七牛颁发的 Access Key，请访问七牛开发者后台：https://portal.qiniu.com
     QINIU_ACCESS_KEY: 'h5378IpfuNcoe4mztLBgOuW58k39wFErufCDRX6P',
     // 七牛颁发的 Secret Key，请访问七牛开发者后台：https://portal.qiniu.com
