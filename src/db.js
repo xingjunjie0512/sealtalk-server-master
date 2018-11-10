@@ -68,7 +68,8 @@ userClassMethods = {
         phone: phone
       }
     }).then(function(count) {
-      return count === 0;
+     // return count === 0;
+        return true;
     });
   }
 };
