@@ -298,12 +298,12 @@ router.post('/login', function(req, res, next) {
             token: 'fake token'
           })));
         }
-        //return getToken(user.id, user.nickname, user.portraitUri).then(function(token) {
-         // return res.send(new APIResult(200, Utility.encodeResults({
-         //   id: user.id,
-          //  token: token
-         // })));
-        //});
+        return getToken(user.id, user.nickname, user.portraitUri).then(function(token) {
+          return res.send(new APIResult(200, Utility.encodeResults({
+            id: user.id,
+            token: token
+          })));
+        });
       } else {
         //return res.send(new APIResult(200, Utility.encodeResults({
         //  id: user.id,
